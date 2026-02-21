@@ -1,36 +1,92 @@
-HeartMate is a user-friendly web application developed using Streamlit that allows users to predict their risk of heart stroke based on medical input parameters. It includes a secure login/registration system and offers a clean, modern UI with optional dark mode support.
+# ❤️ Heart Disease Predictor (KNN Model)
 
-This application uses a pre-trained K-Nearest Neighbors (KNN) machine learning model to analyze health-related inputs and deliver a risk prediction. It is ideal for demonstrating applied ML, Streamlit-based UI development, and user authentication concepts.
+A Machine Learning web application that predicts the likelihood of heart disease using patient medical data.
 
-🔑 Key Features
-🔐 Login/Register: New users can register and securely log in (credentials are stored in users.csv).
+This project uses the K-Nearest Neighbors (KNN) classification algorithm and is deployed using Streamlit.
 
-💡 Health Prediction: Predicts heart disease risk based on user input.
+---
 
-🌙 Dark Mode: Toggle between light and dark themes for better accessibility.
+## 📌 Project Overview
 
-🎯 Real-time Feedback: Instant prediction result after form submission.
+Heart Disease Predictor is a supervised machine learning classification project that predicts whether a patient is at risk of heart disease based on clinical features.
 
-🛠 Technologies Used
-Frontend/UI: Streamlit
+The model is trained on a structured medical dataset and deployed through a user-friendly Streamlit interface.
 
-ML Model: KNN Classifier (trained externally and loaded via joblib)
+---
 
-Data Processing: pandas, scikit-learn StandardScaler
+## 🧠 Machine Learning Approach
 
-Storage: CSV file for storing registered users
+- Type: Supervised Learning (Classification)
+- Algorithm Used: K-Nearest Neighbors (KNN)
+- Distance Metric: Euclidean Distance
+- Evaluation Metrics:
+  - Accuracy Score
+  - Confusion Matrix
 
-📦 Project Structure
-bash
-Copy
-Edit
-project/
-│
-├── app.py                # Main Streamlit app
-├── knn_heart_model.pkl   # Trained KNN model
-├── heart_scaler.pkl      # StandardScaler object
-├── heart_columns.pkl     # Required feature columns
-├── users.csv             # User credentials (created at runtime)
-└── README.md             # Project documentation
+KNN works by identifying the 'K' nearest data points to a new input sample and assigning the majority class among those neighbors.
 
--- the ml used algo is added in repo
+---
+
+## 📊 Features Used
+
+The model uses the following medical parameters:
+
+- Age
+- Sex
+- Chest Pain Type
+- Resting Blood Pressure
+- Cholesterol
+- Fasting Blood Sugar
+- Resting ECG Results
+- Maximum Heart Rate Achieved
+- Exercise Induced Angina
+- ST Depression
+- Slope of Peak Exercise ST Segment
+- Number of Major Vessels
+- Thalassemia
+
+---
+
+## 🔄 Project Workflow
+
+1. Data Cleaning & Preprocessing
+   - Handling missing values
+   - Encoding categorical variables
+   - Feature scaling (important for KNN)
+
+2. Train-Test Split
+
+3. Model Training using KNN
+
+4. Model Evaluation
+
+5. Deployment using Streamlit
+
+---
+
+## 🚀 Installation & Setup (Using UV)
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/UmeshGit125/Heart_disease_predicator-.git
+cd Heart_disease_predicator-
+```
+### 2️⃣ Create Virtual Environment using UV
+    uv venv
+Activate the envoirment
+
+.venv\Scripts\activate
+
+### 3️⃣ Install Dependencies
+  uv pip install -r requirements.txt 
+
+### ▶️ Run the Application
+      streamlit run app.py 
+      http://localhost:8501
+
+
+## 👨‍💻 Author
+
+Umesh
+Machine Learning Enthusiast
